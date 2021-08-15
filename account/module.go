@@ -1,35 +1,36 @@
 package account
 
-import (
-	"polygonscan/base"
-)
+type Action int
 
 const (
-	module = "account"
+	ModuleName = "account"
 
-	balance base.Action = iota
-	balanceBatch
-	txList
-	txListInternal
-	txListInternalByHash
-	txListInternalByRangeBlock
-	transferEventsERC20
-	transferEventsERC721
-	minedBlock
+	Balance Action = iota
+	BalanceBatch
+	TxList
+	TxListInternal
+	TxListInternalByHash
+	TxListInternalByRangeBlock
+	TransferEventsERC20
+	TransferEventsERC721
+	MinedBlock
 	_max
-
 )
 
 var (
 	actions = [_max]string{
-		balance: "balance",
-		balanceBatch: "balancemulti",
-		txList: "txlist",
-		txListInternal: "txlistinternal",
-		txListInternalByHash: "txlistinternal",
-		txListInternalByRangeBlock: "txlistinternal",
-		transferEventsERC20: "tokentx",
-		transferEventsERC721: "tokennfttx",
-		minedBlock: "getminedblocks",
+		Balance:                    "Balance",
+		BalanceBatch:               "balancemulti",
+		TxList:                     "txlist",
+		TxListInternal:             "txlistinternal",
+		TxListInternalByHash:       "txlistinternal",
+		TxListInternalByRangeBlock: "txlistinternal",
+		TransferEventsERC20:        "tokentx",
+		TransferEventsERC721:       "tokennfttx",
+		MinedBlock:                 "getminedblocks",
 	}
 )
+
+func (a Action) String() string {
+	return actions[a]
+}
