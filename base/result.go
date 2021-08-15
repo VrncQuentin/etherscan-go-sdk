@@ -3,21 +3,21 @@ package base
 import "encoding/json"
 
 type (
-    Result interface {
-        Unmarshal(body []byte) error
-    }
+	Result interface {
+		Unmarshal(body []byte) error
+	}
 
-    ResultImplem struct {
-        Status string `json:"status"`
-        Message string `json:"message"`
-    }
+	CallResult struct {
+		Status  string `json:"status"`
+		Message string `json:"message"`
+	}
 
-    resultError struct {
-        ResultImplem
-        Result string `json:"result"`
-    }
+	resultError struct {
+		CallResult
+		Result string `json:"result"`
+	}
 )
 
 func (r *resultError) Unmarshal(body []byte) error {
-    return json.Unmarshal(body, r)
+	return json.Unmarshal(body, r)
 }
