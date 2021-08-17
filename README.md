@@ -11,11 +11,11 @@ Wrapper around polygonscan's API to easily query it in go
 Here's the current TODO list of the project.
 
 ### API Implementation
-- [ ] Account
+- [x] Account
   - [x] Balances
-  - [ ] Transaction histories
+  - [x] Transaction histories
   - [x] Token Transfer Events
-  - [ ] Mined Blocks
+  - [x] Mined Blocks
 - [ ] Contracts
 - [ ] Transactions
 - [ ] Blocks
@@ -29,4 +29,5 @@ Here's the current TODO list of the project.
 ### Improvements
 
 - [ ] Full Documentation
+- [ ] Improve typing, currently the API only returns string: convert to more accurate types 
 - [ ] Reduce code duplications
