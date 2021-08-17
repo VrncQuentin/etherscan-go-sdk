@@ -57,6 +57,17 @@ func (q *Query) SetTxHash(txHash string) *Query {
 	return q
 }
 
+func (q *Query) SetBlockNo(block uint64) *Query {
+	q.Add("blockno", fmt.Sprintf("%d", block))
+	return q
+}
+
+//TODO: support time.duration alongside string
+func (q *Query) SetTimestamp(ts string) *Query {
+	q.Add("timestamp", ts)
+	return q
+}
+
 func (q *Query) SetBlockRange(begin, end uint64) *Query {
 	q.Add("startblock", fmt.Sprintf("%d", begin))
 	q.Add("endblock", fmt.Sprintf("%d", end))
