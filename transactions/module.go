@@ -3,18 +3,18 @@ package transactions
 type Action int
 
 const (
-    ModuleName = "transaction"
+	ModuleName = "transaction"
 
-    GetReceiptStatus Action = iota
-    _max
+	GetReceiptStatus Action = iota
+	_max
 )
 
 var (
-    actions = [_max]string{
-        GetReceiptStatus:     "gettxreceiptstatus",
-    }
+	actions = [_max]string{
+		GetReceiptStatus: "gettxreceiptstatus",
+	}
 )
 
 func (a Action) String() string {
-    return actions[a]
+	return actions[a]
 }
