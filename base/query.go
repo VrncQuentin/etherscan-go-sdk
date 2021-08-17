@@ -52,6 +52,11 @@ func (q *Query) SetContractAddress(address string) *Query {
 	return q
 }
 
+func (q *Query) SetTxHash(txHash string) *Query {
+	q.Add("txhash", txHash)
+	return q
+}
+
 func (q *Query) SetBlockRange(begin, end uint64) *Query {
 	q.Add("startblock", fmt.Sprintf("%d", begin))
 	q.Add("endblock", fmt.Sprintf("%d", end))
