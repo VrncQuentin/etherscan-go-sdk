@@ -3,52 +3,30 @@ package transfer_events
 import (
 	"encoding/json"
 	"polygonscan/base"
+	"polygonscan/base/types"
 )
 
 type (
-	// Token represent a token transfer event
-    // It is used by specialized types:
+	// TransferEvent represent a token transfer event
+	// It is used by specialized types:
 	//   - ERC20
 	//   - ERC721
-    // Both have an additional similar, yet different, field
-    // and are defined below.
-	Token struct {
-		// Block data
-		Block     string `json:"blockNumber"`
-		Timestamp string `json:"timeStamp"`
-		Hash      string `json:"hash"`
-		Nonce     string `json:"nonce"`
-
-		// Participants data
-		From            string `json:"from"`
-		To              string `json:"to"`
-		ContractAddress string `json:"contractAddress"`
-
-		// Transaction data
-		TxIndex string `json:"transactionIndex"`
-		// -> Gas data
-		Gas               string `json:"gas"`
-		GasPrice          string `json:"gasPrice"`
-		GasUsed           string `json:"gasUsed"`
-		CumulativeGasUsed string `json:"cumulativeGasUsed"`
-		// -> Token
-		TokenName    string `json:"tokenName"`
-		TokenSymbol  string `json:"tokenSymbol"`
-		TokenDecimal string `json:"tokenDecimal"`
-
-		// Transaction Res data
-		Input         string `json:"input"`
-		Confirmations string `json:"confirmations"`
+	// Both have an additional similar, yet different, field
+	// and are defined below.
+	TransferEvent struct {
+		types.Tx
+		types.Token
 	}
 
 	// ERC20 represent a Transfer Event (tx) of ERC20
 	ERC20 struct {
-		Token
+		TransferEvent
 		Value string `json:"value"`
 	}
+
 	// ERC721 represent a Transfer Event (tx) of ERC721
 	ERC721 struct {
-		Token
+		TransferEvent
 		TokenID string `json:"tokenID"`
 	}
 
