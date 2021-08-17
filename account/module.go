@@ -9,8 +9,6 @@ const (
 	BalanceBatch
 	TxList
 	TxListInternal
-	TxListInternalByHash
-	TxListInternalByRangeBlock
 	TransferEventsERC20
 	TransferEventsERC721
 	MinedBlock
@@ -19,15 +17,13 @@ const (
 
 var (
 	actions = [_max]string{
-		Balance:                    "Balance",
-		BalanceBatch:               "balancemulti",
-		TxList:                     "txlist",
-		TxListInternal:             "txlistinternal",
-		TxListInternalByHash:       "txlistinternal",
-		TxListInternalByRangeBlock: "txlistinternal",
-		TransferEventsERC20:        "tokentx",
-		TransferEventsERC721:       "tokennfttx",
-		MinedBlock:                 "getminedblocks",
+		Balance:              "Balance",
+		BalanceBatch:         "balancemulti",
+		TxList:               "txlist",
+		TxListInternal:       "txlistinternal",
+		TransferEventsERC20:  "tokentx",
+		TransferEventsERC721: "tokennfttx",
+		MinedBlock:           "getminedblocks",
 	}
 )
 
