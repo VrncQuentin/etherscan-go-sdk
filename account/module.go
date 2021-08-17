@@ -7,6 +7,7 @@ const (
 
 	Balance Action = iota
 	BalanceBatch
+	BalanceToken
 	TxList
 	TxListInternal
 	TransferEventsERC20
@@ -19,6 +20,7 @@ var (
 	actions = [_max]string{
 		Balance:              "Balance",
 		BalanceBatch:         "balancemulti",
+		BalanceToken:         "tokenbalance",
 		TxList:               "txlist",
 		TxListInternal:       "txlistinternal",
 		TransferEventsERC20:  "tokentx",
