@@ -18,7 +18,7 @@ Here's the current TODO list of the project.
   - [x] Mined Blocks
 - [ ] Contracts
 - [ ] Transactions
-- [ ] Blocks
+- [x] Blocks
 - [ ] Logs
 - [ ] GETH/Parity Proxy
 - [ ] Tokens
