@@ -8,13 +8,6 @@ type (
 		TxInfo
 	}
 
-	Block struct {
-		Number    string `json:"blockNumber"`
-		Timestamp string `json:"timeStamp"`
-		Hash      string `json:"hash"`
-		Nonce     string `json:"nonce"`
-	}
-
 	Participants struct {
 		From            string `json:"from"`
 		To              string `json:"to"`
