@@ -3,18 +3,18 @@ package example
 type Action int
 
 const (
-    ModuleName = "example"
+	ModuleName = "example"
 
-    DoSomeCall Action = iota
-    _max
+	DoSomeCall Action = iota
+	_max
 )
 
 var (
-    actions = [_max]string{
-        DoSomeCall: "",
-    }
+	actions = [_max]string{
+		DoSomeCall: "",
+	}
 )
 
 func (a Action) String() string {
-    return actions[a]
+	return actions[a]
 }

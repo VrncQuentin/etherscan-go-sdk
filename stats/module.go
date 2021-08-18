@@ -14,10 +14,10 @@ const (
 
 var (
 	actions = [_max]string{
-		GetTokenSupply: "tokensupply",
+		GetTokenSupply:            "tokensupply",
 		GetTokenCirculatingSupply: "tokenCsupply",
-		GetMaticSupply: "maticsupply",
-		GetMaticPrice: "maticprice",
+		GetMaticSupply:            "maticsupply",
+		GetMaticPrice:             "maticprice",
 	}
 )
 
