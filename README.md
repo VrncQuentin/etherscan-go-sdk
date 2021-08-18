@@ -21,8 +21,10 @@ Here's the current TODO list of the project.
 - [x] Blocks
 - [ ] Logs
 - [ ] GETH/Parity Proxy
-- [ ] Tokens
-- [ ] Stats
+- [x] Tokens
+  - [x] ERC20 Supply Info (in stats module)
+  - [x] ERC20 Balance (in account module)
+- [x] Stats
 
 - [ ] Tests
 
