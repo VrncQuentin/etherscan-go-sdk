@@ -1,19 +1,16 @@
-package queries
+package request
 
 import "encoding/json"
 
 type (
-	Result interface {
-		Unmarshal(body []byte) error
-	}
 
-	CallResult struct {
-		Status  string `json:"status"`
+	Status struct {
+		Code    string `json:"status"`
 		Message string `json:"message"`
 	}
 
 	resultError struct {
-		CallResult
+		Status
 		Result string `json:"result"`
 	}
 )
